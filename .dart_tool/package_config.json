@@ -14,6 +14,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "carousel_slider",
+      "rootUri": "file:///C:/magang/project%20apk/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/magang/project%20apk/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.1",
       "packageUri": "lib/",
@@ -176,7 +182,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-10-20T04:46:29.370157Z",
+  "generated": "2022-10-27T17:45:07.741591Z",
   "generator": "pub",
   "generatorVersion": "2.18.2"
 }
