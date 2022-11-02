@@ -1,0 +1,15 @@
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/icudtl.dat
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/flutter_windows.dll
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/assets/cafe.jpeg
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/assets/dewi.png
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/assets/hotel.jpeg
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/assets/resto.jpeg
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/assets/wisata.jpeg
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/NOTICES
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/pugud benjapu/Documents/src/frontend/build/windows/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

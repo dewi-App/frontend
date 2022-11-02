@@ -1,26 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-// class HomePage extends StatelessWidget {
-//   const HomePage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         body: Column(
-//           children: <Widget>[
-//             Spacer(),
-//             _HomePageState(),
-//             CardListView(),
-//             Spacer(),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 // ini yang pake statefulwidget
 class HomePage extends StatefulWidget {
   @override
@@ -40,9 +20,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SingleChildScrollView(
+          child: Column(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
             child: CarouselSlider(
@@ -98,81 +81,140 @@ class _HomePageState extends State<HomePage> {
                     .toList()),
           ),
           Container(
+            // old style code
             // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                "assets/hotel.jpeg",
-                fit: BoxFit.cover,
-                //     Text(
-                //   'hotel',
-                //   style: Textstyle(
-                //     fontweight: Fontweight.bold,
-                //     color: Colors.white,
-                //     fontSize: 24,
-                //   ),
-                // )
-                width: 700,
-                height: 120,
-              ),
+            // child: Card(
+            //   elevation: 0,
+            //   shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadiusDirectional.circular(15)),
+            //   clipBehavior: Clip.antiAlias,
+            //   child: Image.asset(
+            //     "assets/hotel.jpeg",
+            //     fit: BoxFit.cover,
+            //     width: 1000.0,
+            //     height: 120,
+            //   ),
+            // ),
+            // old style code
+              child: Column(
+              children: [
+                Card(
+                  elevation: 0,
+                  child: Container(
+                      width: 1000.0,
+                      height: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/hotel.jpeg'))),
+                    child: Center(
+                      child: Text(
+                      'Hotel',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24, 
+                      color: Colors.white
+                      ),
+                    ),
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
           Container(
             // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              // Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                "assets/resto.jpeg",
-                fit: BoxFit.cover,
-                width: 700,
-                height: 120,
-              ),
+              child: Column(
+              children: [
+                Card(
+                  elevation: 0,
+                  child: Container(
+                      width: 1000.0,
+                      height: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/resto.jpeg'))),
+                    child: Center(
+                      child: Text(
+                      'Resto',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24, 
+                      color: Colors.white,),
+                    ),
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
           Container(
             // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              // Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                "assets/cafe.jpeg",
-                fit: BoxFit.cover,
-                width: 700,
-                height: 120,
-              ),
+              child: Column(
+              children: [
+                Card(
+                  elevation: 0,
+                  child: Container(
+                      width: 1000.0,
+                      height: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/cafe.jpeg'))),
+                    child: Center(
+                      child: Text(
+                      'Caffe',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24, 
+                      color: Colors.white,),
+                    ),
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
           Container(
             // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              // Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: SingleChildScrollView(
-                child: Image.asset(
-                  "assets/wisata.jpeg",
-                  fit: BoxFit.cover,
-                  width: 700,
-                  height: 120,
-                ),
+                child: Column(
+                children: [
+                  Card(
+                    elevation: 0,
+                    child: Container(
+                        width: 1000.0,
+                        height: 120,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/wisata.jpeg'))),
+                      child: Center(
+                        child: Text(
+                        'Wisata',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24, 
+                        color: Colors.white,),
+                      ),
+                      ),
+                    ),
+                  )
+                ],
               ),
-            ),
           ),
         ],
       ),
-
+      ),
+      ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
