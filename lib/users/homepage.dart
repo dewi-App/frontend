@@ -41,7 +41,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
             child: CarouselSlider(
@@ -100,47 +101,79 @@ class _HomePageState extends State<HomePage> {
             // alignment: FractionalOffset.bottomCenter,
             child: Card(
               elevation: 0,
-              // Card(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(40)),
+                  borderRadius: BorderRadiusDirectional.circular(15)),
               clipBehavior: Clip.antiAlias,
               child: Image.asset(
                 "assets/hotel.jpeg",
+                fit: BoxFit.cover,
+                //     Text(
+                //   'hotel',
+                //   style: Textstyle(
+                //     fontweight: Fontweight.bold,
+                //     color: Colors.white,
+                //     fontSize: 24,
+                //   ),
+                // )
+                width: 700,
+                height: 120,
+              ),
+            ),
+          ),
+          Container(
+            // alignment: FractionalOffset.bottomCenter,
+            child: Card(
+              elevation: 0,
+              // Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusDirectional.circular(15)),
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset(
+                "assets/resto.jpeg",
                 fit: BoxFit.cover,
                 width: 700,
                 height: 120,
               ),
             ),
           ),
+          Container(
+            // alignment: FractionalOffset.bottomCenter,
+            child: Card(
+              elevation: 0,
+              // Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusDirectional.circular(15)),
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset(
+                "assets/cafe.jpeg",
+                fit: BoxFit.cover,
+                width: 700,
+                height: 120,
+              ),
+            ),
+          ),
+          Container(
+            // alignment: FractionalOffset.bottomCenter,
+            child: Card(
+              elevation: 0,
+              // Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusDirectional.circular(15)),
+              clipBehavior: Clip.antiAlias,
+              child: SingleChildScrollView(
+                child: Image.asset(
+                  "assets/wisata.jpeg",
+                  fit: BoxFit.cover,
+                  width: 700,
+                  height: 120,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
+
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
-
-// class CardListView extends StatelessWidget {
-//   const CardListView({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         // alignment: FractionalOffset.bottomCenter,
-//         child: Card(
-//           elevation: 0,
-//           // Card(
-//           shape: RoundedRectangleBorder(
-//               borderRadius: BorderRadiusDirectional.circular(40)),
-//           clipBehavior: Clip.antiAlias,
-//           child: Image.asset(
-//             "assets/hotel.jpeg",
-//             fit: BoxFit.cover,
-//             width: 700,
-//             height: 120,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
