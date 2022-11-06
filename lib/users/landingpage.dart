@@ -1,5 +1,6 @@
 import 'package:dewi_app/constants.dart';
 import 'package:dewi_app/users/homepage.dart';
+import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/mapspage.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class _LandingPageState extends State<LandingPage> {
   List<Widget> _container = [
     new HomePage(), //halaman yang kita perlukan list emua disini
     new MapsPage(),
+    new DestinationPage(),
   ];
 
   @override

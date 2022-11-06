@@ -1,3 +1,4 @@
+import 'package:dewi_app/users/destination.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -96,6 +97,25 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ))
                     .toList()),
+          ),
+          Container(
+            child: Center(
+              child: new IconButton(
+                icon: new Icon(
+                  Icons.arrow_circle_right_outlined,
+                  size: 50.0,
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return DestinationPage();
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
           Container(
             // alignment: FractionalOffset.bottomCenter,
