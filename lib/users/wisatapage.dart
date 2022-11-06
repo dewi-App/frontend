@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 // ini yang pake statefulwidget
-class DestinationPage extends StatefulWidget {
+class WisataPage extends StatefulWidget {
   @override
-  State<DestinationPage> createState() => _DestinationPageState();
+  State<WisataPage> createState() => _WisataPageState();
 }
 
-class _DestinationPageState extends State<DestinationPage> {
+class _WisataPageState extends State<WisataPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Semua Wisata'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
@@ -25,15 +28,15 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/hotel.jpeg'))),
+                                image: AssetImage('assets/wisata.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Hotel',
+                            'Wisata',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -54,15 +57,15 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/resto.jpeg'))),
+                                image: AssetImage('assets/wisata.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Resto',
+                            'Wisata',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -84,15 +87,15 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/cafe.jpeg'))),
+                                image: AssetImage('assets/wisata.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Caffe',
+                            'Wisata',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -114,7 +117,7 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(

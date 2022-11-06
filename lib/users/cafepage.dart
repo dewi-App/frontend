@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 // ini yang pake statefulwidget
-class DestinationPage extends StatefulWidget {
+class CafePage extends StatefulWidget {
   @override
-  State<DestinationPage> createState() => _DestinationPageState();
+  State<CafePage> createState() => _CafePageState();
 }
 
-class _DestinationPageState extends State<DestinationPage> {
+class _CafePageState extends State<CafePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Semua Cafe'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
@@ -25,15 +28,15 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/hotel.jpeg'))),
+                                image: AssetImage('assets/cafe.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Hotel',
+                            'Cafe',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -54,37 +57,7 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('assets/resto.jpeg'))),
-                        child: Center(
-                          child: Text(
-                            'Resto',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                // alignment: FractionalOffset.bottomCenter,
-                child: Column(
-                  children: [
-                    Card(
-                      elevation: 0,
-                      child: Container(
-                        width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
@@ -92,7 +65,7 @@ class _DestinationPageState extends State<DestinationPage> {
                                 image: AssetImage('assets/cafe.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Caffe',
+                            'Cafe',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -114,15 +87,45 @@ class _DestinationPageState extends State<DestinationPage> {
                       elevation: 0,
                       child: Container(
                         width: 1000.0,
-                        height: 120,
+                        height: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/wisata.jpeg'))),
+                                image: AssetImage('assets/cafe.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Wisata',
+                            'Cafe',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                // alignment: FractionalOffset.bottomCenter,
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/cafe.jpeg'))),
+                        child: Center(
+                          child: Text(
+                            'Cafe',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
