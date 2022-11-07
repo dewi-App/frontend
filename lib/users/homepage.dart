@@ -1,25 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
-// class HomePage extends StatelessWidget {
-//   const HomePage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         body: Column(
-//           children: <Widget>[
-//             Spacer(),
-//             _HomePageState(),
-//             CardListView(),
-//             Spacer(),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+// import 'package:dewi_app/styles/button.dart';
 
 // ini yang pake statefulwidget
 class HomePage extends StatefulWidget {
@@ -40,139 +21,245 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            child: CarouselSlider(
-                //untuk memanggil carousel
-                options: CarouselOptions(
-                  //property untuk carousel
-                  autoPlay: true, //untuk mengaktifkan carousel
-                  aspectRatio: 2.0, //ratio image carousel
-                  viewportFraction: 1, //ukuran dari isi carousel
-                  enlargeCenterPage: true, //untuk gamabr ada ditengah dari page
-                ),
-                items: imgList //untuk pemanggilan image list di atas
-                    .map((item) => Container(
-                          child: Container(
-                            child: ClipRRect(
-                                child: Stack(
-                              children: <Widget>[
-                                Image.network(item,
-                                    fit: BoxFit.cover, width: 1000.0),
-                                Positioned(
-                                  bottom: 0.0,
-                                  left: 0.0,
-                                  right: 0.0,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          Color.fromARGB(200, 0, 0, 0),
-                                          Color.fromARGB(0, 0, 0, 0)
-                                        ],
-                                        begin: Alignment.bottomCenter,
-                                        end: Alignment.topCenter,
-                                      ),
-                                    ),
-                                    padding: EdgeInsets.symmetric(
-                                        vertical: 10.0, horizontal: 20.0),
-                                    child: Center(
-                                      child: Text(
-                                        'Info ke ${imgList.indexOf(item)}', //untuk text yang akan di munculkan di carousel
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                child: CarouselSlider(
+                    //untuk memanggil carousel
+                    options: CarouselOptions(
+                      //property untuk carousel
+                      autoPlay: true, //untuk mengaktifkan carousel
+                      aspectRatio: 2.0, //ratio image carousel
+                      viewportFraction: 1, //ukuran dari isi carousel
+                      enlargeCenterPage:
+                          true, //untuk gamabr ada ditengah dari page
+                    ),
+                    items: imgList //untuk pemanggilan image list di atas
+                        .map((item) => Container(
+                              child: Container(
+                                child: ClipRRect(
+                                    child: Stack(
+                                  children: <Widget>[
+                                    Image.network(item,
+                                        fit: BoxFit.cover, width: 1000.0),
+                                    Positioned(
+                                      bottom: 0.0,
+                                      left: 0.0,
+                                      right: 0.0,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              Color.fromARGB(200, 0, 0, 0),
+                                              Color.fromARGB(0, 0, 0, 0)
+                                            ],
+                                            begin: Alignment.bottomCenter,
+                                            end: Alignment.topCenter,
+                                          ),
+                                        ),
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 10.0, horizontal: 20.0),
+                                        child: Center(
+                                          child: Text(
+                                            'Info ke ${imgList.indexOf(item)}', //untuk text yang akan di munculkan di carousel
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 20.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ),
-                              ],
-                            )),
+                                  ],
+                                )),
+                              ),
+                            ))
+                        .toList()),
+              ),
+              Column(
+                children: <Widget>[
+                  SizedBox(
+                    width: double.infinity,
+                    child: Container(
+                      child: Text(
+                        "Pilih Kategori :",
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/hotel.jpeg'))),
+                        child: Center(
+                          child: Text(
+                            'Hotel',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 24,
+                                color: Colors.white),
                           ),
-                        ))
-                    .toList()),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                "assets/hotel.jpeg",
-                fit: BoxFit.cover,
-                //     Text(
-                //   'hotel',
-                //   style: Textstyle(
-                //     fontweight: Fontweight.bold,
-                //     color: Colors.white,
-                //     fontSize: 24,
-                //   ),
-                // )
-                width: 700,
-                height: 120,
-              ),
-            ),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              // Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                "assets/resto.jpeg",
-                fit: BoxFit.cover,
-                width: 700,
-                height: 120,
-              ),
-            ),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              // Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                "assets/cafe.jpeg",
-                fit: BoxFit.cover,
-                width: 700,
-                height: 120,
-              ),
-            ),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-            child: Card(
-              elevation: 0,
-              // Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusDirectional.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: SingleChildScrollView(
-                child: Image.asset(
-                  "assets/wisata.jpeg",
-                  fit: BoxFit.cover,
-                  width: 700,
-                  height: 120,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
-            ),
+              Container(
+                // alignment: FractionalOffset.bottomCenter,
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/resto.jpeg'))),
+                        child: Center(
+                          child: Text(
+                            'Resto',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                // alignment: FractionalOffset.bottomCenter,
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/cafe.jpeg'))),
+                        child: Center(
+                          child: Text(
+                            'Cafe',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                // alignment: FractionalOffset.bottomCenter,
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/wisata.jpeg'))),
+                        child: Center(
+                          child: Text(
+                            'Wisata',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      // alignment: FractionalOffset.bottomCenter,
+                      child: Column(
+                        children: [
+                          Card(
+                            elevation: 0,
+                            child: Container(
+                              width: 1000.0,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage('assets/museum.png'))),
+                              child: Center(
+                                child: Text(
+                                  'Museum',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 42, 128, 168),
+                        onPrimary: Colors.white,
+                        shadowColor: Color.fromRGBO(104, 184, 221, 1),
+                        elevation: 3,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0)),
+                        minimumSize: Size(1000.0, 40),
+                      ),
+                      onPressed: () {},
+                      child: Text('Lihat Semua Destinasi'),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
-
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
