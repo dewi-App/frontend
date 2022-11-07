@@ -1,6 +1,7 @@
 import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/hotelpage.dart';
+import 'package:dewi_app/users/museum.dart';
 import 'package:dewi_app/users/restopage.dart';
 import 'package:dewi_app/users/wisatapage.dart';
 import 'package:flutter/material.dart';
@@ -223,6 +224,42 @@ class _HomePageState extends State<HomePage> {
                               }));
                             },
                             child: const Text('Wisata'),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                // alignment: FractionalOffset.bottomCenter,
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/museum.jpeg'))),
+                        child: Center(
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                              foregroundColor: Colors.white,
+                              shadowColor: Colors.black,
+                            ),
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return MuseumPage();
+                              }));
+                            },
+                            child: const Text('Museum'),
                           ),
                         ),
                       ),
