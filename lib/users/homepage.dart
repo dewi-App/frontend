@@ -29,7 +29,6 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
           child: Column(
-<<<<<<< HEAD
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -74,57 +73,10 @@ class _HomePageState extends State<HomePage> {
                                             'Info ke ${imgList.indexOf(item)}', //untuk text yang akan di munculkan di carousel
                                             style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 20.0,
+                                              fontSize: 28,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
-=======
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            child: CarouselSlider(
-                //untuk memanggil carousel
-                options: CarouselOptions(
-                  //property untuk carousel
-                  autoPlay: true, //untuk mengaktifkan carousel
-                  aspectRatio: 2.0, //ratio image carousel
-                  viewportFraction: 1, //ukuran dari isi carousel
-                  enlargeCenterPage: true, //untuk gamabr ada ditengah dari page
-                ),
-                items: imgList //untuk pemanggilan image list di atas
-                    .map((item) => Container(
-                          child: Container(
-                            child: ClipRRect(
-                                child: Stack(
-                              children: <Widget>[
-                                Image.network(item,
-                                    fit: BoxFit.cover, width: 1000.0),
-                                Positioned(
-                                  bottom: 0.0,
-                                  left: 0.0,
-                                  right: 0.0,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          Color.fromARGB(200, 0, 0, 0),
-                                          Color.fromARGB(0, 0, 0, 0)
-                                        ],
-                                        begin: Alignment.bottomCenter,
-                                        end: Alignment.topCenter,
-                                      ),
-                                    ),
-                                    padding: EdgeInsets.symmetric(
-                                        vertical: 10.0, horizontal: 20.0),
-                                    child: Center(
-                                      child: Text(
-                                        'Info ke ${imgList.indexOf(item)}', //untuk text yang akan di munculkan di carousel
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20.0,
-                                          fontWeight: FontWeight.bold,
->>>>>>> 3c8c5e1b1ba5bc14b0f838873dd5ae1289c3fd91
                                         ),
                                       ),
                                     ),
@@ -135,6 +87,7 @@ class _HomePageState extends State<HomePage> {
                         .toList()),
               ),
               Container(
+                // alignment: FractionalOffset.bottomCenter,
                 child: Column(
                   children: [
                     Card(
@@ -163,7 +116,6 @@ class _HomePageState extends State<HomePage> {
                             },
                             child: const Text('Hotel'),
                           ),
-<<<<<<< HEAD
                         ),
                       ),
                     )
@@ -279,149 +231,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ],
-=======
-                        ))
-                    .toList()),
-          ),
-          Container(
-            // old style code
-            // alignment: FractionalOffset.bottomCenter,
-            // child: Card(
-            //   elevation: 0,
-            //   shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadiusDirectional.circular(15)),
-            //   clipBehavior: Clip.antiAlias,
-            //   child: Image.asset(
-            //     "assets/hotel.jpeg",
-            //     fit: BoxFit.cover,
-            //     width: 1000.0,
-            //     height: 120,
-            //   ),
-            // ),
-            // old style code
-              child: Column(
-              children: [
-                Card(
-                  elevation: 0,
-                  child: Container(
-                      width: 1000.0,
-                      height: 120,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/hotel.jpeg'))),
-                    child: Center(
-                      child: Text(
-                      'Hotel',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24, 
-                      color: Colors.white
-                      ),
-                    ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-              child: Column(
-              children: [
-                Card(
-                  elevation: 0,
-                  child: Container(
-                      width: 1000.0,
-                      height: 120,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/resto.jpeg'))),
-                    child: Center(
-                      child: Text(
-                      'Resto',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24, 
-                      color: Colors.white,),
-                    ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-              child: Column(
-              children: [
-                Card(
-                  elevation: 0,
-                  child: Container(
-                      width: 1000.0,
-                      height: 120,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/cafe.jpeg'))),
-                    child: Center(
-                      child: Text(
-                      'Caffe',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24, 
-                      color: Colors.white,),
-                    ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Container(
-            // alignment: FractionalOffset.bottomCenter,
-                child: Column(
-                children: [
-                  Card(
-                    elevation: 0,
-                    child: Container(
-                        width: 1000.0,
-                        height: 120,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage('assets/wisata.jpeg'))),
-                      child: Center(
-                        child: Text(
-                        'Wisata',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24, 
-                        color: Colors.white,),
-                      ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
->>>>>>> 3c8c5e1b1ba5bc14b0f838873dd5ae1289c3fd91
           ),
         ),
       ),
-<<<<<<< HEAD
-=======
-      ),
-      ),
->>>>>>> 3c8c5e1b1ba5bc14b0f838873dd5ae1289c3fd91
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
