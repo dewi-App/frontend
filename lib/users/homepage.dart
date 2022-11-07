@@ -1,3 +1,8 @@
+import 'package:dewi_app/users/cafepage.dart';
+import 'package:dewi_app/users/destination.dart';
+import 'package:dewi_app/users/hotelpage.dart';
+import 'package:dewi_app/users/restopage.dart';
+import 'package:dewi_app/users/wisatapage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:dewi_app/styles/button.dart';
@@ -82,20 +87,22 @@ class _HomePageState extends State<HomePage> {
                             ))
                         .toList()),
               ),
-              Column(
-                children: <Widget>[
-                  SizedBox(
-                    width: double.infinity,
-                    child: Container(
-                      child: Text(
-                        "Pilih Kategori :",
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               Container(
+                // old style code
+                // alignment: FractionalOffset.bottomCenter,
+                // child: Card(
+                //   elevation: 0,
+                //   shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadiusDirectional.circular(15)),
+                //   clipBehavior: Clip.antiAlias,
+                //   child: Image.asset(
+                //     "assets/hotel.jpeg",
+                //     fit: BoxFit.cover,
+                //     width: 1000.0,
+                //     height: 120,
+                //   ),
+                // ),
+                // old style code
                 child: Column(
                   children: [
                     Card(
@@ -169,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                                 image: AssetImage('assets/cafe.jpeg'))),
                         child: Center(
                           child: Text(
-                            'Cafe',
+                            'Caffe',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -209,49 +216,6 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                    ),
-                    Container(
-                      // alignment: FractionalOffset.bottomCenter,
-                      child: Column(
-                        children: [
-                          Card(
-                            elevation: 0,
-                            child: Container(
-                              width: 1000.0,
-                              height: 120,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: AssetImage('assets/museum.png'))),
-                              child: Center(
-                                child: Text(
-                                  'Museum',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 42, 128, 168),
-                        onPrimary: Colors.white,
-                        shadowColor: Color.fromRGBO(104, 184, 221, 1),
-                        elevation: 3,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        minimumSize: Size(1000.0, 40),
-                      ),
-                      onPressed: () {},
-                      child: Text('Lihat Semua Destinasi'),
                     )
                   ],
                 ),

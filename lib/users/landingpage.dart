@@ -1,6 +1,11 @@
 import 'package:dewi_app/constants.dart';
+import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/homepage.dart';
+import 'package:dewi_app/users/destination.dart';
+import 'package:dewi_app/users/hotelpage.dart';
 import 'package:dewi_app/users/mapspage.dart';
+import 'package:dewi_app/users/restopage.dart';
+import 'package:dewi_app/users/wisatapage.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
