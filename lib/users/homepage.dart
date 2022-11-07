@@ -1,11 +1,11 @@
 import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/hotelpage.dart';
+// import 'package:dewi_app/users/museum.dart';
 import 'package:dewi_app/users/restopage.dart';
 import 'package:dewi_app/users/wisatapage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-// import 'package:dewi_app/styles/button.dart';
 
 // ini yang pake statefulwidget
 class HomePage extends StatefulWidget {
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                                             'Info ke ${imgList.indexOf(item)}', //untuk text yang akan di munculkan di carousel
                                             style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 20.0,
+                                              fontSize: 28,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -88,21 +88,7 @@ class _HomePageState extends State<HomePage> {
                         .toList()),
               ),
               Container(
-                // old style code
                 // alignment: FractionalOffset.bottomCenter,
-                // child: Card(
-                //   elevation: 0,
-                //   shape: RoundedRectangleBorder(
-                //       borderRadius: BorderRadiusDirectional.circular(15)),
-                //   clipBehavior: Clip.antiAlias,
-                //   child: Image.asset(
-                //     "assets/hotel.jpeg",
-                //     fit: BoxFit.cover,
-                //     width: 1000.0,
-                //     height: 120,
-                //   ),
-                // ),
-                // old style code
                 child: Column(
                   children: [
                     Card(
@@ -116,13 +102,20 @@ class _HomePageState extends State<HomePage> {
                                 fit: BoxFit.cover,
                                 image: AssetImage('assets/hotel.jpeg'))),
                         child: Center(
-                          child: Text(
-                            'Hotel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24,
-                                color: Colors.white),
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                              foregroundColor: Colors.white,
+                              shadowColor: Colors.black,
+                            ),
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return HotelPage();
+                              }));
+                            },
+                            child: const Text('Hotel'),
                           ),
                         ),
                       ),
@@ -145,14 +138,20 @@ class _HomePageState extends State<HomePage> {
                                 fit: BoxFit.cover,
                                 image: AssetImage('assets/resto.jpeg'))),
                         child: Center(
-                          child: Text(
-                            'Resto',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                              foregroundColor: Colors.white,
+                              shadowColor: Colors.black,
                             ),
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return RestoPage();
+                              }));
+                            },
+                            child: const Text('Resto'),
                           ),
                         ),
                       ),
@@ -175,14 +174,20 @@ class _HomePageState extends State<HomePage> {
                                 fit: BoxFit.cover,
                                 image: AssetImage('assets/cafe.jpeg'))),
                         child: Center(
-                          child: Text(
-                            'Caffe',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                              foregroundColor: Colors.white,
+                              shadowColor: Colors.black,
                             ),
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return CafePage();
+                              }));
+                            },
+                            child: const Text('Cafe'),
                           ),
                         ),
                       ),
@@ -205,14 +210,56 @@ class _HomePageState extends State<HomePage> {
                                 fit: BoxFit.cover,
                                 image: AssetImage('assets/wisata.jpeg'))),
                         child: Center(
-                          child: Text(
-                            'Wisata',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                              foregroundColor: Colors.white,
+                              shadowColor: Colors.black,
                             ),
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return WisataPage();
+                              }));
+                            },
+                            child: const Text('Wisata'),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                // alignment: FractionalOffset.bottomCenter,
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 0,
+                      child: Container(
+                        width: 1000.0,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/museum.png'))),
+                        child: Center(
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              textStyle: const TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                              foregroundColor: Colors.white,
+                              shadowColor: Colors.black,
+                            ),
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return WisataPage();
+                              }));
+                            },
+                            child: const Text('Museum'),
                           ),
                         ),
                       ),
