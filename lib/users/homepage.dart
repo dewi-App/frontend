@@ -1,7 +1,7 @@
 import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/hotelpage.dart';
-// import 'package:dewi_app/users/museum.dart';
+import 'package:dewi_app/users/museum.dart';
 import 'package:dewi_app/users/restopage.dart';
 import 'package:dewi_app/users/wisatapage.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +33,23 @@ class _HomePageState extends State<HomePage> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                        margin: EdgeInsets.all(15),
+                        child: Text(
+                          "Informasi Terbaru",
+                          style: new TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                            color: Colors.black,
+                          ),
+                        )),
+                  ),
+                ],
+              ),
               Container(
                 child: CarouselSlider(
                     //untuk memanggil carousel
@@ -58,6 +75,8 @@ class _HomePageState extends State<HomePage> {
                                       right: 0.0,
                                       child: Container(
                                         decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
                                           gradient: LinearGradient(
                                             colors: [
                                               Color.fromARGB(200, 0, 0, 0),
@@ -86,6 +105,22 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ))
                         .toList()),
+              ),
+              Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      margin: EdgeInsets.all(20),
+                      child: Text("Pilih Kategori :",
+                          style: new TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15.0,
+                            color: Colors.black,
+                          )),
+                    ),
+                  ),
+                ],
               ),
               Container(
                 // alignment: FractionalOffset.bottomCenter,
@@ -244,7 +279,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/museum.png'))),
+                                image: AssetImage('assets/museum.jpeg'))),
                         child: Center(
                           child: TextButton(
                             style: TextButton.styleFrom(
@@ -256,7 +291,7 @@ class _HomePageState extends State<HomePage> {
                             onPressed: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return WisataPage();
+                                return MuseumPage();
                               }));
                             },
                             child: const Text('Museum'),

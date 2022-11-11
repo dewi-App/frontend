@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-2022/11/06-20:34:50.066 3474 Reusing MANIFEST C:\Users\NAFISA~1\AppData\Local\Temp\flutter_tools.42735e03\flutter_tools_chrome_device.2ed8728b\Default\Service Worker\Database/MANIFEST-000001
-2022/11/06-20:34:50.072 3474 Recovering log #3
-2022/11/06-20:34:50.075 3474 Reusing old log C:\Users\NAFISA~1\AppData\Local\Temp\flutter_tools.42735e03\flutter_tools_chrome_device.2ed8728b\Default\Service Worker\Database/000003.log 
-=======
-<<<<<<< HEAD
-2022/11/06-20:38:39.671 550 Reusing MANIFEST C:\Users\User\AppData\Local\Temp\flutter_tools.465affef\flutter_tools_chrome_device.572be7ca\Default\Service Worker\Database/MANIFEST-000001
-2022/11/06-20:38:39.672 550 Recovering log #3
-2022/11/06-20:38:39.673 550 Reusing old log C:\Users\User\AppData\Local\Temp\flutter_tools.465affef\flutter_tools_chrome_device.572be7ca\Default\Service Worker\Database/000003.log 
-=======
-2022/11/02-22:23:34.048 84e4 Creating DB C:\Users\PUGUDB~1\AppData\Local\Temp\flutter_tools.73a80437\flutter_tools_chrome_device.7146f0a4\Default\Service Worker\Database since it was missing.
-2022/11/02-22:23:34.060 84e4 Reusing MANIFEST C:\Users\PUGUDB~1\AppData\Local\Temp\flutter_tools.73a80437\flutter_tools_chrome_device.7146f0a4\Default\Service Worker\Database/MANIFEST-000001
->>>>>>> 3c8c5e1b1ba5bc14b0f838873dd5ae1289c3fd91
->>>>>>> 3c5e80ccee1c1cc28307e2826d6ee561a4389fbc
+2022/11/11-18:54:20.646 19b0 Reusing MANIFEST C:\Users\NAFISA~1\AppData\Local\Temp\flutter_tools.a5c13434\flutter_tools_chrome_device.7bb9a92a\Default\Service Worker\Database/MANIFEST-000001
+2022/11/11-18:54:20.650 19b0 Recovering log #3
+2022/11/11-18:54:20.652 19b0 Reusing old log C:\Users\NAFISA~1\AppData\Local\Temp\flutter_tools.a5c13434\flutter_tools_chrome_device.7bb9a92a\Default\Service Worker\Database/000003.log 
