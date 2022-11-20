@@ -8,142 +8,82 @@ class HotelPage extends StatefulWidget {
 }
 
 class _HotelPageState extends State<HotelPage> {
+  final List<Map<String, dynamic>> listHotel = [
+    {"name": "Hotel Yuk Sri", "rating": 4},
+    {"name": "Hotel Royal", "rating": 3},
+    {"name": "Hotel Ceunah", "rating": 5},
+    {"name": "Hotel Kunaon", "rating": 4},
+    {"name": "Hotel OYOK", "rating": 5},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Semua Hotel'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: Column(
-                  children: [
-                    Card(
-                      elevation: 0,
-                      child: Container(
-                        width: 1000.0,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('assets/hotel.jpeg'))),
-                        child: Center(
-                          child: Text(
-                            'Hotel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                // alignment: FractionalOffset.bottomCenter,
-                child: Column(
-                  children: [
-                    Card(
-                      elevation: 0,
-                      child: Container(
-                        width: 1000.0,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('assets/hotel.jpeg'))),
-                        child: Center(
-                          child: Text(
-                            'Hotel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
+      body: ListView(
+        children: listHotel.map((data) {
+          return Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Card(
+                  elevation: 0,
+                  child: Container(
+                    width: 1000.0,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/hotel.jpeg'))),
+                    child: Center(
+                        child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "${data['name']}",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
-                            ),
-                          ),
+                              fontSize: 30,
+                              color: Colors.white),
                         ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                // alignment: FractionalOffset.bottomCenter,
-                child: Column(
-                  children: [
-                    Card(
-                      elevation: 0,
-                      child: Container(
-                        width: 1000.0,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('assets/hotel.jpeg'))),
-                        child: Center(
-                          child: Text(
-                            'Hotel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
+                        Text(
+                          "${data['rating']}",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
-                            ),
-                          ),
+                              fontSize: 30,
+                              color: Colors.yellow),
                         ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                // alignment: FractionalOffset.bottomCenter,
-                child: Column(
-                  children: [
-                    Card(
-                      elevation: 0,
-                      child: Container(
-                        width: 1000.0,
-                        height: 170,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('assets/hotel.jpeg'))),
-                        child: Center(
-                          child: Text(
-                            'Hotel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white,
-                            ),
-                          ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                              shape: const BeveledRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(3))),
+                              textStyle: const TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                              foregroundColor: Color.fromARGB(255, 25, 25, 25),
+                              shadowColor: Colors.black,
+                              backgroundColor: Colors.yellow),
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return HotelPage();
+                            }));
+                          },
+                          child: const Text('Lihat Detail'),
                         ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+                      ],
+                    )),
+                  ),
+                )
+              ]);
+        }).toList(),
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
