@@ -34,15 +34,37 @@ class _HotelPageState extends State<HotelPage> {
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage('assets/hotel.jpeg'))),
-                        child: Center(
-                          child: Text(
-                            'Hotel',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 24,
-                                color: Colors.white),
-                          ),
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'El Royale',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24,
+                                  color: Colors.white),
+                            ),
+                            Icon(Icons.star,
+                                size: 30,
+                                color: Color.fromARGB(255, 251, 255, 37)),
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                  // shape: CircleBorder(
+                                  //   side: BorderSide(
+                                  //       width: 8,
+                                  //       color: Colors.blue.withOpacity(0.3)),
+                                  // ),
+                                  backgroundColor:
+                                      Color.fromRGBO(242, 242, 88, 1)),
+                              onPressed: () {},
+                              child: Text(
+                                "Lihat Detail",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     )
