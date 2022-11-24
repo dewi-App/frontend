@@ -4,6 +4,7 @@ import 'package:dewi_app/users/hotelpage.dart';
 import 'package:dewi_app/users/museum.dart';
 import 'package:dewi_app/users/restopage.dart';
 import 'package:dewi_app/users/wisatapage.dart';
+import 'package:dewi_app/users/detailpage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
