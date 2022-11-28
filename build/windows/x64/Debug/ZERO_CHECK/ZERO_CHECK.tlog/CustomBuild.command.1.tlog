@@ -1,0 +1,10 @@
+^C:\USERS\PUGUD BENJAPU\DOCUMENTS\SRC\FRONTEND\BUILD\WINDOWS\CMAKEFILES\557728EB9B2A48DE256FF894E880AEB4\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/pugud benjapu/Documents/src/frontend/windows" "-BC:/Users/pugud benjapu/Documents/src/frontend/build/windows" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/pugud benjapu/Documents/src/frontend/build/windows/dewi_app.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
