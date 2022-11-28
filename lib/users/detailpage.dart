@@ -20,16 +20,36 @@ class _detailpageState extends State<detailpage> {
             width: 1000.0,
             fit: BoxFit.cover,
           ),
-          ElevatedButton(
-            child: Text('Lihat Di Maps'),
-            style: ElevatedButton.styleFrom(
-              minimumSize: Size(1000.0, 40),
-              primary: Color.fromRGBO(104, 184, 221, 1),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(40))),
-            ),
-            onPressed: () {},
-          ),
+          Column(children: <Widget>[
+            Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                    child: Text("Hotel El Royale",
+                        style: new TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 23.0,
+                        )))),
+            Column(children: <Widget>[
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                      child: Text("Deskripsi :",
+                          style: new TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17.0,
+                          )))),
+              ElevatedButton(
+                child: Text('Lihat Di Maps'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(1000.0, 40),
+                  primary: Color.fromRGBO(104, 184, 221, 1),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(40))),
+                ),
+                onPressed: () {},
+              ),
+            ])
+          ])
         ])));
   }
 }
