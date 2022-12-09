@@ -3,6 +3,7 @@ import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/homepage.dart';
 import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/hotelpage.dart';
+import 'package:dewi_app/users/informationpage.dart';
 import 'package:dewi_app/users/mapspage.dart';
 import 'package:dewi_app/users/restopage.dart';
 import 'package:dewi_app/users/wisatapage.dart';
@@ -35,7 +36,11 @@ class _LandingPageState extends State<LandingPage> {
           //untuk menyimpan icon di sebelah kanan appbar
           IconButton(
             icon: Icon(Icons.info), //pemanggilan appbar
-            onPressed: () {}, //untuk link jika kita menekan icons tersebut
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return InformationPage();
+              }));
+            }, //untuk link jika kita menekan icons tersebut
           )
         ],
       ),
