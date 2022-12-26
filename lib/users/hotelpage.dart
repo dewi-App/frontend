@@ -57,10 +57,10 @@ class _HotelPageState extends State<HotelPage> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 30,
+                              fontSize: 25,
                               color: Colors.yellow),
                         ),
-                        Icon(Icons.star, size: 30, color: Colors.yellow),
+                        Icon(Icons.star, size: 25, color: Colors.yellow),
                         TextButton(
                           style: TextButton.styleFrom(
                               shape: const BeveledRectangleBorder(

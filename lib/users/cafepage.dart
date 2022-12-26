@@ -1,3 +1,4 @@
+import 'package:dewi_app/users/detailpage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -72,7 +73,7 @@ class _CafePageState extends State<CafePage> {
                           onPressed: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return CafePage();
+                              return detailpage();
                             }));
                           },
                           child: const Text('Lihat Detail'),
