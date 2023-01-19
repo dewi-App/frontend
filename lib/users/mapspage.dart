@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dewi_app/users/homepage.dart';
 import 'package:dewi_app/users/informationpage.dart';
+import 'package:open_street_map_search_and_pick/open_street_map_search_and_pick.dart';
 
 class MapsPage extends StatefulWidget {
   @override
@@ -74,7 +75,15 @@ class _MapsPageState extends State<MapsPage> {
                   fontSize: 15,
                 )))
       ])),
-      body: Center(child: Text('Maps Page')),
+      body: OpenStreetMapSearchAndPick(
+          center: LatLong(-6.901994792938045, 107.61863148913064),
+          buttonColor: Colors.blue,
+          buttonText: 'Dewi Kota Bandung',
+          onPicked: (pickedData) {
+            print(pickedData.latLong.latitude);
+            print(pickedData.latLong.longitude);
+            print(pickedData.address);
+          }),
     );
   }
 }
