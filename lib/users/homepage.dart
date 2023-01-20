@@ -1,3 +1,4 @@
+import 'package:dewi_app/constants.dart';
 import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/hotelpage.dart';
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             width: double.infinity,
             height: 120,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Palette.pblue2,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(20),
                 // Radius.circular(20.0, 0, 0, 20.0),
@@ -102,6 +103,7 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
           child: Column(
+            
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -123,7 +125,8 @@ class _HomePageState extends State<HomePage> {
               //   ],
               // ),
               Container(
-                child: CarouselSlider(
+                child: 
+                CarouselSlider(
                     //untuk memanggil carousel
                     options: CarouselOptions(
                       //property untuk carousel
@@ -134,7 +137,8 @@ class _HomePageState extends State<HomePage> {
                           true, //untuk gamabr ada ditengah dari page
                     ),
                     items: imgList //untuk pemanggilan image list di atas
-                        .map((item) => Container(
+                        .map((item) => Padding(
+                          padding: const EdgeInsets.only(bottom: 15.0),
                               child: Container(
                                 child: ClipRRect(
                                     child: Stack(

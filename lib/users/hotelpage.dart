@@ -40,11 +40,12 @@ class _HotelPageState extends State<HotelPage> {
                             fit: BoxFit.cover,
                             image: AssetImage('assets/hotel.jpeg'))),
                     child: Center(
-                        child: Column(
+                        child: 
+                        Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
+                         Text(
                           "${data['name']}",
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -52,7 +53,11 @@ class _HotelPageState extends State<HotelPage> {
                               fontSize: 30,
                               color: Colors.white),
                         ),
-                        Text(
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                          Icon(Icons.star, size: 25, color: Colors.yellow),
+                          Text(
                           "${data['rating']}",
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -60,7 +65,8 @@ class _HotelPageState extends State<HotelPage> {
                               fontSize: 25,
                               color: Colors.yellow),
                         ),
-                        Icon(Icons.star, size: 25, color: Colors.yellow),
+                          ],
+                        ),
                         TextButton(
                           style: TextButton.styleFrom(
                               shape: const BeveledRectangleBorder(

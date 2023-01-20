@@ -1,3 +1,4 @@
+import 'package:dewi_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:dewi_app/users/homepage.dart';
 import 'package:dewi_app/users/mapspage.dart';
@@ -22,7 +23,7 @@ class _InformationPageState extends State<InformationPage> {
             padding: EdgeInsets.all(20),
             width: double.infinity,
             height: 120,
-            color: Colors.blue,
+            color: Palette.pblue2,
             alignment: Alignment.bottomLeft,
             child: Text(
               "Dewi Kota Bandung",

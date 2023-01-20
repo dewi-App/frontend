@@ -1,3 +1,4 @@
+import 'package:dewi_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:dewi_app/users/homepage.dart';
 import 'package:dewi_app/users/informationpage.dart';
@@ -23,7 +24,7 @@ class _MapsPageState extends State<MapsPage> {
             padding: EdgeInsets.all(20),
             width: double.infinity,
             height: 120,
-            color: Colors.blue,
+            color: Palette.pblue2,
             alignment: Alignment.bottomLeft,
             child: Text(
               "Dewi Kota Bandung",
@@ -77,7 +78,7 @@ class _MapsPageState extends State<MapsPage> {
       ])),
       body: OpenStreetMapSearchAndPick(
           center: LatLong(-6.901994792938045, 107.61863148913064),
-          buttonColor: Colors.blue,
+          buttonColor: Palette.pblue2,
           buttonText: 'Dewi Kota Bandung',
           onPicked: (pickedData) {
             print(pickedData.latLong.latitude);

@@ -1,5 +1,6 @@
 import 'package:dewi_app/launcher.dart';
 import 'package:flutter/material.dart';
+import 'package:dewi_app/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Montserrat',
+        primarySwatch: Palette.pblue2,
       ),
       home: LauncherPage(),
     );
