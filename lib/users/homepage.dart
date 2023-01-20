@@ -1,3 +1,4 @@
+import 'package:dewi_app/constants.dart';
 import 'package:dewi_app/users/cafepage.dart';
 import 'package:dewi_app/users/destination.dart';
 import 'package:dewi_app/users/hotelpage.dart';
@@ -5,6 +6,8 @@ import 'package:dewi_app/users/museum.dart';
 import 'package:dewi_app/users/restopage.dart';
 import 'package:dewi_app/users/wisatapage.dart';
 import 'package:dewi_app/users/detailpage.dart';
+import 'package:dewi_app/users/mapspage.dart';
+import 'package:dewi_app/users/informationpage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -27,32 +30,103 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        // image: AssetImage("assets/dewi.png"),
+        title: Text("Dewi Kota Bandung"),
+        //   //   // leading: Icon(Icons.menu),
+      ),
+      drawer: Drawer(
+          child: Column(children: [
+        Container(
+            padding: EdgeInsets.all(20),
+            width: double.infinity,
+            height: 120,
+            decoration: BoxDecoration(
+              color: Palette.pblue2,
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(20),
+                // Radius.circular(20.0, 0, 0, 20.0),
+              ),
+            ),
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              "Dewi Kota Bandung",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+              ),
+            )),
+        ListTile(
+            onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: ((context) => HomePage()),
+              ));
+            },
+            leading: Icon(
+              Icons.home,
+              // color: Palette.pblue1,
+            ),
+            title: Text("Home",
+                style: TextStyle(
+                  fontSize: 15,
+                ))),
+        ListTile(
+            onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: ((context) => MapsPage()),
+              ));
+            },
+            leading: Icon(
+              Icons.location_on_sharp,
+              // color: Palette.pblue1,
+            ),
+            title: Text("Maps",
+                style: TextStyle(
+                  fontSize: 15,
+                ))),
+        ListTile(
+            onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: ((context) => InformationPage()),
+              ));
+            },
+            leading: Icon(
+              Icons.info_sharp,
+              // color: Palette.pblue1,
+            ),
+            title: Text("Tentang",
+                style: TextStyle(
+                  fontSize: 15,
+                )))
+      ])),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
           child: Column(
+            
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                        margin: EdgeInsets.all(15),
-                        child: Text(
-                          "Informasi Terbaru",
-                          style: new TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.0,
-                            color: Colors.black,
-                          ),
-                        )),
-                  ),
-                ],
-              ),
+              // Column(
+              //   children: <Widget>[
+              //     Align(
+              //       alignment: Alignment.centerLeft,
+              //       child: Container(
+              //           margin: EdgeInsets.all(15),
+              //           child: Text(
+              //             "Informasi Terbaru",
+              //             style: new TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //               fontSize: 18.0,
+              //               color: Colors.black,
+              //             ),
+              //           )),
+              //     ),
+              //   ],
+              // ),
               Container(
-                child: CarouselSlider(
+                child: 
+                CarouselSlider(
                     //untuk memanggil carousel
                     options: CarouselOptions(
                       //property untuk carousel
@@ -63,7 +137,8 @@ class _HomePageState extends State<HomePage> {
                           true, //untuk gamabr ada ditengah dari page
                     ),
                     items: imgList //untuk pemanggilan image list di atas
-                        .map((item) => Container(
+                        .map((item) => Padding(
+                          padding: const EdgeInsets.only(bottom: 15.0),
                               child: Container(
                                 child: ClipRRect(
                                     child: Stack(
@@ -107,22 +182,22 @@ class _HomePageState extends State<HomePage> {
                             ))
                         .toList()),
               ),
-              Column(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      margin: EdgeInsets.all(20),
-                      child: Text("Pilih Kategori :",
-                          style: new TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15.0,
-                            color: Colors.black,
-                          )),
-                    ),
-                  ),
-                ],
-              ),
+              // Column(
+              //   children: <Widget>[
+              //     Align(
+              //       alignment: Alignment.centerLeft,
+              //       child: Container(
+              //         margin: EdgeInsets.all(20),
+              //         child: Text("Pilih Kategori :",
+              //             style: new TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //               fontSize: 15.0,
+              //               color: Colors.black,
+              //             )),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               Container(
                 // alignment: FractionalOffset.bottomCenter,
                 child: Column(
