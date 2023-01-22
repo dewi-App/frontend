@@ -52,13 +52,19 @@ class _CafePageState extends State<CafePage> {
                               fontSize: 30,
                               color: Colors.white),
                         ),
-                        Text(
-                          "${data['rating']}",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30,
-                              color: Colors.yellow),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.star, size: 25, color: Colors.yellow),
+                            Text(
+                              "${data['rating']}",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.yellow),
+                            ),
+                          ],
                         ),
                         TextButton(
                           style: TextButton.styleFrom(
